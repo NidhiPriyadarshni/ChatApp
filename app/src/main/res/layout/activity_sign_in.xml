@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login"
+    tools:context=".SignInActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/app_bar_layout_login"
+            layout="@layout/tool_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <EditText
+            android:id="@+id/login_phone_e"
+            android:layout_width="322dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="148dp"
+            android:layout_marginEnd="48dp"
+            android:layout_marginBottom="528dp"
+            android:background="@drawable/inbox"
+            android:ems="10"
+            android:hint="Enter your phone no. with country code"
+            android:inputType="phone"
+            android:padding="8dp"
+
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/send_verification_code_b"
+
+            android:layout_width="322dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="48dp"
+
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="48dp"
+            android:layout_marginBottom="447dp"
+            android:background="@drawable/buttons"
+            android:text="Send Verification Code"
+            android:textAllCaps="false"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/login_phone_e" />
+
+        <EditText
+            android:id="@+id/code_login_e"
+            android:layout_width="322dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="48dp"
+            android:layout_marginEnd="48dp"
+
+            android:layout_marginBottom="392dp"
+            android:background="@drawable/inbox"
+            android:ems="10"
+            android:hint="Enter Verification Code sent on your phone no."
+            android:inputType="textPersonName"
+            android:padding="8dp"
+            android:textColor="#ffffff"
+            android:textSize="21sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/send_verification_code_b" />
+
+        <Button
+            android:id="@+id/verify_code_b"
+            android:layout_width="322dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="21dp"
+
+
+            android:layout_marginEnd="48dp"
+
+            android:layout_marginBottom="316dp"
+            android:background="@drawable/buttons"
+            android:text="Verify"
+            android:textAllCaps="false"
+            android:textColor="#ffffff"
+            android:textSize="30sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.428"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/code_login_e" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="118dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <ProgressBar
+            android:id="@+id/progress_login"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="99dp"
+            android:layout_height="121dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:visibility="gone"
+            android:progressTint="#0F3C38" />
+    </FrameLayout>
+</RelativeLayout>

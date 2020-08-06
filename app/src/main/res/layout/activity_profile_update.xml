@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login"
+    tools:context=".ProfileUpdate">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/app_bar_layout_update"
+            layout="@layout/tool_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <EditText
+            android:id="@+id/about_update"
+            android:layout_width="330dp"
+            android:layout_height="86dp"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="48dp"
+            android:layout_marginBottom="200dp"
+            android:background="@drawable/buttons"
+            android:drawableStart="@drawable/edit"
+
+            android:ems="10"
+            android:hint="Name"
+            android:inputType="textPersonName"
+            android:padding="10dp"
+            android:text="About"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.533"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/name_update" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image_update"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="66dp"
+            android:layout_marginEnd="80dp"
+            android:layout_marginBottom="415dp"
+
+            android:background="@drawable/profile"
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="2dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/name_update"
+            android:layout_width="341dp"
+            android:layout_height="61dp"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="34dp"
+            android:layout_marginEnd="48dp"
+            android:layout_marginBottom="300dp"
+            android:background="@drawable/buttons"
+            android:drawableStart="@drawable/profile"
+            android:ems="10"
+            android:hint="Name"
+            android:inputType="textPersonName"
+            android:text="Name"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profile_image_update" />
+
+        <EditText
+            android:id="@+id/phone_update"
+            android:layout_width="312dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="48dp"
+            android:layout_marginBottom="130dp"
+            android:background="@drawable/buttons"
+            android:drawableStart="@drawable/phone"
+            android:text="TextView"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/about_update" />
+
+        <Button
+            android:id="@+id/button_update"
+            android:layout_width="148dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="131dp"
+            android:layout_marginTop="38dp"
+            android:layout_marginEnd="131dp"
+            android:layout_marginBottom="39dp"
+            android:text="Update"
+            android:textSize="22sp"
+            android:textColor="#274bfe"
+            android:background="@drawable/buttons"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/phone_update" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="118dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <ProgressBar
+            android:id="@+id/progress_update"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="99dp"
+            android:layout_height="121dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:visibility="gone"
+            android:progressTint="#0F3C38" />
+    </FrameLayout>
+
+</RelativeLayout>

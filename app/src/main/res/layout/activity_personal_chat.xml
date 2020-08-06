@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/chat_app_background"
+    tools:context=".PersonalChat">
+
+    *<androidx.appcompat.widget.Toolbar
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/personal_chat_bar"
+    android:background="@color/colorPrimaryDark"
+    />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:layout_below="@id/personal_chat_bar"
+        android:layout_above="@id/personal_chat_box_container"
+
+        android:id="@+id/personal_chat_recycler_view"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:id="@+id/personal_chat_box_container"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+
+        android:layout_alignParentBottom="true">
+
+        <RelativeLayout
+            android:layout_width="310dp"
+            android:layout_height="45dp"
+            android:background="@drawable/chat_button"
+            android:layout_alignParentStart="true">
+
+            <EditText
+                android:id="@+id/personal_chat_box"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:background="@null"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="0dp"
+                android:padding="5dp"
+                android:text=""
+                android:textColor="#000000"
+                android:textSize="16sp" />
+            <ImageButton
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/file"
+                android:id="@+id/personal_chat_file"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="1dp"
+                android:layout_toEndOf="@id/personal_chat_box"
+                android:background="#ffffff"/>
+
+        </RelativeLayout>
+        <ImageView
+            android:layout_width="72dp"
+            android:layout_marginTop="5dp"
+            android:layout_alignParentEnd="true"
+            android:layout_height="wrap_content"
+            android:src="@drawable/send"
+            android:id="@+id/personal_chat_send"/>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

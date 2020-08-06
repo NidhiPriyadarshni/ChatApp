@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="@color/colorPrimaryDark">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_margin="2dp"
+        android:background="@drawable/profile"
+        android:id="@+id/personal_bar_img"
+        android:padding="5dp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:orientation="vertical"
+        android:layout_toEndOf="@id/personal_bar_img">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/personal_bar_name"
+            android:text="UserName"
+            android:textSize="17sp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/personal_bar_about"
+            android:text="UserInfo"
+            android:textSize="12sp"/>
+    </LinearLayout>
+
+</RelativeLayout>
